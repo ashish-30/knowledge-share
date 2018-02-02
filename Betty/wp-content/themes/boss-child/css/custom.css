@@ -1,0 +1,312 @@
+/*--------------------------------------------------------------
+This is your custom stylesheet.
+
+Add your own styles here to make theme updates easier.
+To override any styles from other stylesheets, simply copy them into here and edit away.
+
+Make sure to respect the media queries! Otherwise you may
+accidentally add desktop styles to the mobile layout.
+
+You're the boss, so have fun editing!
+
+--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Global Styles
+2.0 - Responsive media queries (mobile styles)
+	2.1 - MAXIMUM width of 720 pixels (phones landscape)
+	2.2 - MAXIMUM width of 350 pixels (phones portrait)
+	2.3 - MINIMUM width of 721 pixels (tablets+)
+	2.4 - MINIMUM width of 1040 pixels (desktops and laptops)
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 - Global Styles
+--------------------------------------------------------------*/
+
+
+.lesson-info{
+	background-color: rgba(221, 44, 99, 0.52);
+    	-webkit-text-fill-color: white;
+	padding: 18px;
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.32);
+}
+
+
+
+
+.custom-column-left{ float: left; width: 33%; }
+.custom-column-right{ float: right; width: 33%; }
+.custom-column-center{ display: inline-block; width: 33%; }
+
+
+
+
+
+/*--------------------------------------------------------------
+2.0 - Responsive media queries (mobile styles)
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+2.1 - MAXIMUM width of 720 pixels (phones landscape)
+--------------------------------------------------------------*/
+@media screen and (max-width: 720px) {
+
+
+	/*
+	.just_an_example {
+		color: black;
+	}
+	*/
+
+
+}/* don't delete this closing bracket */
+
+
+
+
+
+/*--------------------------------------------------------------
+2.2 - MAXIMUM width of 350 pixels (phones portrait)
+--------------------------------------------------------------*/
+@media screen and (max-width: 350px) {
+
+
+	/*
+	.just_an_example {
+		color: black;
+	}
+	*/
+
+
+}/* don't delete this closing bracket */
+
+
+
+
+
+/*--------------------------------------------------------------
+2.3 - MINIMUM width of 721 pixels (tablets+)
+--------------------------------------------------------------*/
+@media screen and (min-width: 721px)  {
+
+
+	/*
+	.just_an_example {
+		color: black;
+	}
+	*/
+
+
+}/* don't delete this closing bracket */
+
+
+
+
+
+/*--------------------------------------------------------------
+2.4 - MINIMUM width of 1040 pixels (desktops and laptops)
+--------------------------------------------------------------*/
+@media screen and (min-width: 1040px)  {
+
+
+	/*
+	.just_an_example {
+		color: black;
+	}
+	*/
+
+
+}/* don't delete this closing bracket */
+
+
+
+
+
+
+@media screen and (min-width: 480px) {
+
+.site-header .right-col {
+visibility: hidden;
+}
+
+.boxed .page-right-sidebar{
+
+max-width: 100%;
+padding-left: 0px;
+padding-right: 0px;
+
+
+
+
+}
+
+
+
+}
+
+
+/*Ashish start(8-11-17)*/
+
+#mastlogo{
+	margin-left: 0;
+	float: right;
+}
+.site-header .header-inner .left-col{
+	width: 100%;
+}
+.header-wrap{
+	background-color: #fff;
+}
+
+.home-page.boxed #scroll-area{
+	display: none;
+}
+
+.boxed #right-panel-inner{
+	margin-left: 294px;
+	border-left: 1px solid #ccc;
+}
+.boxed #scroll-area{
+	display: block;
+
+}
+.widget-area{
+	width: 100%;
+}
+
+#secondary{
+	border-right: 1px solid #ddd !important;
+	border-top: 1px solid #ddd !important;
+}
+#secondary.widget-area .widget{
+	padding: 6px; 
+}
+/*.widget-area .widget_course_teacher header span a{
+	font-size: 16px;
+}*/
+.page-right-sidebar .site-content{
+  width: 100%;
+}
+body.left-menu-open #left-panel-inner #scroll-area{
+	width: 295px;
+	position: initial !important;
+}
+.list-img img{
+	height: 100px;
+	width: 100px;
+}
+.learndash_topic_dots .topic_item a{
+	display: flex;
+}
+.list-heading a{
+	display: flex;
+	align-items: center;
+	font-weight: 600;
+}
+.default-img{
+	border: 1px solid #ccc;
+}
+.home-page #right-panel-inner,.page-template-page-no-buddypanel #right-panel-inner{
+   margin-left: 0 !important;
+}
+
+#lessons_list .notcompleted.hasImage:before{
+	content:'';
+	margin-right: 0; 
+    margin-left: 0;
+    position: initial; 
+    width: auto;
+    }
+#lessons_list .topic_item .topic-notcompleted.hasImage:before{
+    	margin-top: 0;
+    	content:'';
+		margin-right: 0; 
+	    margin-left: 0;
+	    position: initial; 
+	    width: auto;
+    }
+
+#lessons_list h4.list-heading{
+	padding-left: 21px;
+	position: initial;
+	text-align: left;
+	margin-right: 0;
+	height: 104px;
+}
+.learndash_topic_dots.type-list ul li,#lessons_list .topic_item .topic-notcompleted:before,.learndash #lessons_list .notcompleted:before{
+	position: initial;
+	margin-left: 0;
+	margin-top: 0;
+	margin-right: 0;
+}
+#lessons_list .list-img{
+	margin-right: 21px;
+}
+#wdm-acoordian .lesson-accordian{
+    border: 2px solid #dfe3e7;
+    line-height: 1;
+    color: #4dcadd !important;
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin-top: 15px;
+    position: relative;
+    margin-bottom: 0;
+    outline: none;
+    cursor: pointer;
+ }
+@media screen and (max-width: 480px){
+.boxed #right-panel-inner {
+    margin-left: 0;
+ }
+ .learndash_nevigation_lesson_topics_list .bb-lesson-list-item{
+ 	padding: 16px 0; 
+ 	display: block;
+ }
+}
+@media screen and (max-width: 768px){
+.list-img img {
+    height: 75px;
+    width: 75px;
+ }
+ .list-heading a,.learndash_topic_dots .topic_item a{
+ 	display: flex;
+    flex-direction: column;
+ }
+ .list-heading a.notcompleted{
+ 	flex-direction: row;
+ 	align-items: flex-start;
+ }
+ .list-heading a.hasImage{
+ 	align-items: flex-start;
+ 	flex-direction: column;
+ }
+ body.left-menu-open .header-outher{
+  margin-left: 0;
+ }
+}
+ @media screen and (max-width: 992px){
+ 	.single-sfwd-courses .course-header .image{
+ 		max-width: 100%;
+ 	}
+
+ }
+ 
+
+@media screen and (max-width: 1000px) and (min-width: 480px){
+.left-menu-open #secondary.widget-area .widget {
+     padding-left: 0; 
+     padding-right: 0; 
+     padding: 6px;
+ }
+}
+/*@media screen and (max-width: 822px) and (min-width: 480px){
+.left-menu-open #secondary.widget-area .widget {
+     padding-left: 0; 
+     padding-right: 0; 
+     padding: 6px;
+ }
+}*/
+
+/*Ashish End*/
