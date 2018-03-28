@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body class="form-container">
+   <div class="form-wrapper">
+   	 <div class="inner-wraper">
+		<h3>ITEMS LIST</h3>
+	   	<ul class="items">
+	   		
+	   	</ul>
+	     <form class="add-form">
+		   	<input type="text" name="item" id="add-item" placeholder="Add Item">
+		   	<input type="submit" value="submit">
+	    </form>
+   	</div>
+   </div>
+
+
+<script>
+const addItems =document.querySelector(".add-form");
+const itemList =document.querySelector(".items");
+const items = JSON.parse(localStorage.getItem('items')) || [];
+
+function addItem(e){
+	e.preventDefault();
+	const itemText =(this.querySelector("input[name=item]")).value;
+	const item={
+    	itemText,
+    	done: false
+    };
+    items.push(item);
+    populate(items,itemList);
+    localStorage.setItem('items', JSON.stringify(items));
+	this.reset();
+ }
+  
+  function populate(plates = [],plateList){
+  	
+
+  		plateList.innerHTML = plates.map((plate, i) => {
+  		if(plate.itemText.length != 0){
+  		 return `<li>
+		
+			${plate.itemText}
+		
+  		
+		 </li>`;
+        }	
+  	}).join('');
+
+  
+  }
+
+addItems.addEventListener("submit",addItem);
+populate(items,itemList);	
+	
+</script>
+</body>
+</html>

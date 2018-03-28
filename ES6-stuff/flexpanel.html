@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dog World</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body class="flex-container">
+   <div class="panels">
+   	<div class="panel panel1">
+		<p>smart</p>
+		<p class="center">ALL</p>
+		<p>Dog</p>
+   	</div>
+   	<div class="panel panel2">
+		<p>cute</p>
+		<p class="center">ALL</p>
+		<p>Dog</p>
+   	</div>
+   	<div class="panel panel3">
+   		<p>innocent</p>
+		<p class="center">ALL</p>
+		<p>Dog</p>
+   	</div>
+   	<div class="panel panel4">
+   		<p>lady</p>
+		<p class="center">ALL</p>
+		<p>Dog</p>
+   	</div>
+   	<div class="panel panel5">
+   		<p>Beauty Puppy</p>
+		<p class="center">ALL</p>
+		<p>Dog</p>
+   	</div>
+   	
+   	 
+   </div>
+
+
+<script>
+
+	const panel =document.querySelectorAll('.panel');
+
+	function togglePanel(){
+		this.classList.toggle('open');
+	}
+
+	function activeTrnaslate(e){
+			
+			if(e.propertyName == 'flex-grow'){
+				this.classList.toggle('active');
+			}
+	}
+
+	panel.forEach(panel => panel.addEventListener("click",togglePanel));
+	panel.forEach(panel => panel.addEventListener("transitionend",activeTrnaslate));
+</script>
+</body>
+</html>

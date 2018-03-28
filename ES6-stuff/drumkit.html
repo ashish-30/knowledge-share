@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drumkit</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body class="drum-wrapper">
+<div class="keys flex">
+	<div data-key="65" class="key">
+		<kbd>A</kbd>
+		<p>Clap</p>
+	</div>
+	<div data-key="66" class="key">
+		<kbd>B</kbd>
+		<p>Bird</p>
+	</div>
+	<div data-key="67" class="key">
+		<kbd>C</kbd>
+		<p>Dog</p>
+	</div>
+	<div data-key="68" class="key">
+		<kbd>D</kbd>
+		<p>African drums</p>
+	</div>
+	<div data-key="69" class="key">
+		<kbd>E</kbd>
+		<p>Bugle first</p>
+	</div>
+	<div data-key="70" class="key">
+		<kbd>F</kbd>
+		<p>Chinese gong</p>
+	</div>
+	<div data-key="71" class="key">
+		<kbd>G</kbd>
+		<p>Drumroll</p>
+	</div>
+	<div data-key="72" class="key">
+		<kbd>H</kbd>
+		<p>Short drum</p>
+	</div>
+</div>
+
+<audio data-key="65" src="sounds/applause-01.wav"></audio>
+<audio data-key="66" src="sounds/bird.wav"></audio>
+<audio data-key="67" src="sounds/dog.wav"></audio>
+<audio data-key="68" src="sounds/African drums 1.wav"></audio>
+<audio data-key="69" src="sounds/Bugle first call.wav"></audio>
+<audio data-key="70" src="sounds/Chinese gong 2.wav"></audio>
+<audio data-key="71" src="sounds/Drumroll, drum roll, drums, drum,.wav"></audio>
+<audio data-key="72" src="sounds/Short drum roll.wav"></audio>
+
+
+<script>
+
+	window.addEventListener("keydown",function(e){
+ 		const audio =document.querySelector(`audio[data-key="${e.keyCode}"]`);
+ 		
+		const key =document.querySelector(`.key[data-key="${e.keyCode}"]`);
+		if(!audio){
+			return;
+		}
+		audio.currentTime = 0; //Rewind
+		audio.play();
+		key.classList.add('playing')
+	})
+    
+    function removeTransition(e){
+    	this.classList.remove('playing');
+   }
+
+	const keys=document.querySelectorAll('.key');
+	keys.forEach(key => key.addEventListener('transitionend',removeTransition));
+	
+</script>
+</body>
+</html>
